@@ -22,7 +22,6 @@ ll rec(ll i, ll lagbe) {
         return dp[i][lagbe];
     }
     int a = upper_bound(ara, ara+n, ara[i] + w) - ara;
-    a = a ? a : a - 1;
     ll x = (a - i) + rec(a, lagbe - 1);
     ll z =  rec(i + 1, lagbe);
     return dp[i][lagbe] = max(x, z);
